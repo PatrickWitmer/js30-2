@@ -1,2 +1,3 @@
 # 🧪 js30-2
-Sharping my js tools and refactoring to be more personal. {via Wes Bos - Javascript30}
+
+Sharpening my JS tools and refactoring the lessons to be more personal. {via Wes Bos - Javascript30}

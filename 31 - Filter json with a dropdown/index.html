@@ -6,6 +6,27 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <select id="dropdown"></select>
 </body>
+
+<script>
+  // var bands = [];
+
+  const json = "./bands.json";
+
+  console.log(json);
+
+  var dropdown = document.getElementById("dropdown");
+
+  for (var i = 0; i < json.bands.length; i++) {
+    var option = document.createElement("option");
+    option.text = json.bands.name[i];
+    option.value = json.bands.name[i];
+    dropdown.add(option);
+  }
+
+
+
+</script>
+
 </html>

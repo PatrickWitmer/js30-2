@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sort Without Articles</title>
+</head>
+<body>
+
+  <style>
+    body {
+      margin: 0;
+      background-image: url('https://images.unsplash.com/photo-1516320654132-c3a74da4da5b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80');
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    #bands {
+      background-color: white;
+      width: 500px;
+      margin: auto;
+      padding: 0;
+      box-shadow: 0 0 0 20px rgba(21, 191, 197, 0.05);
+    }
+    
+    #bands li {
+      list-style: inside square;
+      padding: 20px;
+      border-bottom: 1px solid red;
+    }
+    
+    #bands li:last-child {
+      border-bottom: 0;
+    }
+
+    a {
+      
+    }
+
+  </style>
+
+  <ul id="bands"></ul>
+
+<script>
+// Bands array  
+const bands = ['The Darkthrone', 'An Enslaved', 'A Venom', 'Satyricon', 'Mayhem', 'Gorgoroth', 'Immortal', 'Emperor' ]
+
+// Remove the articles and trim to remove whitespace
+function strip(bandName) {
+  return bandName.replace(/^(a |the |an )/gi, '').trim();
+}
+
+// Sort the array
+const sortDarkness = bands.sort((a,b) => strip(a) > strip(b) ? 1 : -1);
+console.log(sortDarkness)
+// Map and display the array as a list
+document.querySelector('#bands').innerHTML = sortDarkness.map(band => `<li>${band}</li>`).join(''); 
+
+</script>
+
+</body>
+</html>

@@ -54,6 +54,7 @@ function strip(bandName) {
 // Sort the array
 const sortDarkness = bands.sort((a,b) => strip(a) > strip(b) ? 1 : -1);
 console.log(sortDarkness)
+
 // Map and display the array as a list
 document.querySelector('#bands').innerHTML = sortDarkness.map(band => `<li>${band}</li>`).join(''); 
 
